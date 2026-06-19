@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import { news } from "@/data/news";
+import Navbar from "@/components/Navbar";
 import NewsCard from "@/components/NewsCard";
-import CategoryNavbar from "@/components/CategoryNavbar";
 
 export default function HomePage() {
   const [search, setSearch] =
@@ -33,36 +33,26 @@ export default function HomePage() {
   );
 
   return (
-    <main className="max-w-5xl mx-auto p-6">
-      <h1 className="text-4xl font-bold mb-6">
-        SoftIO News
-      </h1>
-
-      <input
-        type="text"
-        placeholder="Cari berita..."
-        value={search}
-        onChange={(e) =>
-          setSearch(e.target.value)
-        }
-        className="w-full border p-3 rounded-lg mb-4"
+    <>
+      <Navbar
+        search={search}
+        setSearch={setSearch}
+        category={category}
+        setCategory={setCategory}
       />
 
-      <CategoryNavbar
-  selectedCategory={category}
-  setSelectedCategory={
-    setCategory
-  }
-/>
+      <main className="max-w-5xl mx-auto p-6">
 
-      <div className="grid gap-4">
-        {filteredNews.map((article) => (
-          <NewsCard
-            key={article.id}
-            article={article}
-          />
-        ))}
-      </div>
-    </main>
+        <div className="grid gap-4">
+          {filteredNews.map((article) => (
+            <NewsCard
+              key={article.id}
+              article={article}
+            />
+          ))}
+        </div>
+
+      </main>
+    </>
   );
 }

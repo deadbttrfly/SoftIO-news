@@ -26,6 +26,28 @@ export default async function NewsDetail({
         {article.title}
       </h1>
 
+      <img
+        src={article.image}
+        alt={article.title}
+        width="800"
+        height="600"
+        className="w-full h-96 object-cover rounded-lg mt-6"
+      />
+
+      <p className="text-blue-500 mt-4">
+        {article.category}
+      </p>
+
+      <p className="mt-2 text-gray-600">
+        {article.excerpt}
+      </p>
+
+      <hr className="my-6" />
+
+      <h2 className="text-3xl font-bold mb-4">
+        Konten Berita
+      </h2>
+
       <p className="mt-6 text-lg">
         {article.content}
       </p>
