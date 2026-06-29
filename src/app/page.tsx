@@ -93,7 +93,7 @@ export default function HomePage() {
               {sideArticles.map((article) => (
                 <div 
                   key={article.id} 
-                  className="bg-white/5 hover:bg-white/10 backdrop-blur-xl border border-white/10 rounded-2xl p-3 transition-all cursor-pointer group"
+                  className="hover:bg-white/10 backdrop-blur-xl backdrop-saturate-150 border border-white/10 rounded-2xl p-3 transition-all cursor-pointer group"
                 >
                   <div className="flex flex-row gap-3 items-center">
                     <img 

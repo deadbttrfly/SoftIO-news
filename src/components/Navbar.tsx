@@ -51,7 +51,7 @@ export default function Navbar({
   };
 
   return (
-    <nav className="sticky top-0 z-50 backdrop-blur-xl backdrop-saturate-150 border-b border-white/10 bg-black/20 shadow-xl p-4 backdrop-filter">
+    <nav className="sticky top-0 z-50 bg-white/5 backdrop-blur-xl backdrop-saturate-150 border-b border-white/10 bg-black/20 shadow-xl p-4 backdrop-filter">
       <div className="max-w-7xl mx-auto flex flex-col gap-4">
 
         <div className="flex items-center justify-between gap-4">
